@@ -1,0 +1,30 @@
+<h1>New Status</h1>
+
+<% if @status.errors.any? %>
+      <div id="error_explanation" class="form-group">
+        <div class="alert alert-danger col-sm-offset-2 col-sm-4">
+          <h4><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h4>
+          <ul>
+          <% @status.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
+<% end %>
+
+
+<%= form_for @status do |f| %>
+
+  <%= f.label :user %>
+  <%= f.text_field :user %>
+
+  <%= f.label :post %>
+  <%= f.text_field :post %>
+
+  <%= f.label :likes %>
+  <%= f.text_field :likes %>
+
+  <%= f.submit %>
+
+<% end %>

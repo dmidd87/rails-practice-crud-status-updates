@@ -1,0 +1,17 @@
+<%= notice %>
+
+<div class="container">
+
+  <h1><%= @status.user %></h1>
+
+    <p>
+      <strong>Post:</strong>
+      <%= @status.post %>
+    </p>
+
+    <p>
+      <strong>Likes:</strong>
+      <%= @status.likes %>
+    </p>
+
+<%= link_to "Edit", edit_status_path %>

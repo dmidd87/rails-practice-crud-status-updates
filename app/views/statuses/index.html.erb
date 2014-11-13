@@ -1,0 +1,22 @@
+<%= link_to 'New Status', new_status_path %>
+
+<table class="table">
+       <thead>
+         <tr>
+           <th>User</th>
+           <th>Status</th>
+           <th>Likes</th>
+          </tr>
+       </thead>
+
+       <tbody>
+         <% @status.each do |status| %>
+           <tr>
+               <td><%= status.user %></td>
+               <td><%= status.post %></td>
+               <td><%= status.likes %></td>
+               <td><%= link_to 'Edit', edit_status_path(status) %></td>
+           </tr>
+         <% end %>
+       </tbody>
+     </table>
